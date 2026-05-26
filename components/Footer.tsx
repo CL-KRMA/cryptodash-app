@@ -5,7 +5,7 @@ function Footer() {
       <div className="socials">
         <a href="https://github.com/CL-KRMA" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/cheick-laye-kourouma-2b1b423b8/?locale=fr-FR" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="mailto:">Email</a>
+        <a href="mailto:clkourouma688@gmail.com">Email</a>
       </div>
     </footer>
   );
