@@ -29,7 +29,7 @@ export async function GET() {
     lastFetch = now;
 
     return NextResponse.json(data);
-  } catch (_error) {
+  } catch {
     return NextResponse.json({ error: "Erreur API CoinGecko" }, { status: 500 });
   }
 }
