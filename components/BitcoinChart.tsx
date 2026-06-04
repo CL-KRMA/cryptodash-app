@@ -21,7 +21,7 @@ interface MarketChart {
 }
 
 export default function BitcoinChart() {
-  const [chartData, setChartData] = useState<any>(null);
+  const [chartData, setChartData] = useState<null | Record<string, unknown>>(null);
 
   useEffect(() => {
     const fetchData = async () => {

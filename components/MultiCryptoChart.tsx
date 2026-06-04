@@ -16,12 +16,8 @@ import {
 // Enregistrement des modules Chart.js
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Tooltip, Legend, Filler);
 
-interface MarketChart {
-  prices: [number, number][];
-}
-
 export default function MultiCryptoChart() {
-  const [chartData, setChartData] = useState<any>(null);
+  const [chartData, setChartData] = useState<null | Record<string, unknown>>(null);
 
   useEffect(() => {
     const fetchData = async () => {
