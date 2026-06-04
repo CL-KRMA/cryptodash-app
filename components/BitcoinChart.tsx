@@ -11,6 +11,7 @@ import {
   Tooltip,
   Legend,
   Filler,
+  ChartData,
 } from "chart.js";
 
 // Enregistrement des modules Chart.js
@@ -20,8 +21,10 @@ interface MarketChart {
   prices: [number, number][];
 }
 
+type BitcoinChartData = ChartData<"line", number[], string>;
+
 export default function BitcoinChart() {
-  const [chartData, setChartData] = useState<null | Record<string, unknown>>(null);
+  const [chartData, setChartData] = useState<BitcoinChartData | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {

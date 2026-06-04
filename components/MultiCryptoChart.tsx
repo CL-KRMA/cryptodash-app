@@ -11,13 +11,16 @@ import {
   Tooltip,
   Legend,
   Filler,
+  ChartData,
 } from "chart.js";
 
 // Enregistrement des modules Chart.js
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Tooltip, Legend, Filler);
 
+type MultiCryptoChartData = ChartData<"line", number[], string>;
+
 export default function MultiCryptoChart() {
-  const [chartData, setChartData] = useState<null | Record<string, unknown>>(null);
+  const [chartData, setChartData] = useState<MultiCryptoChartData | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
